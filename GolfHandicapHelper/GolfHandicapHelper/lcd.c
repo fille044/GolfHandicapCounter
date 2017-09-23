@@ -1,9 +1,11 @@
+/* ------------------------------------------------------------------------- */
 /*
- * lcd.c
- *
- * Created: 21/09/2017 20:22:17
- *  Author: fille
+  lcd.c
+ 
+  Created: 21/09/2017 20:22:17
+  Author: fille
  */ 
+/* ------------------------------------------------------------------------- */
 
 
 /*	RS PB1
@@ -18,11 +20,11 @@
 	D7 PD7
 */
 
-#include "hal.h"
+#include "lcd.h"
+
 #include <util/delay.h>
 
 #define F_CPU 1000000UL
-
 
 /* ------------------------------------------------------------------------- */
 /*
@@ -43,7 +45,7 @@ void send_it(void)
 	Prints the characters given from input to function
 */
 /* ------------------------------------------------------------------------- */
-void printLcd(char *input) 
+void printLcdChar(char *input) 
 {
 	RS_SIGN;	
 	int a = strlen(input); 
@@ -108,3 +110,4 @@ void initLcd(void)
 	clearLcd();
 	set_cursorLcd(1,1);
 }
+
