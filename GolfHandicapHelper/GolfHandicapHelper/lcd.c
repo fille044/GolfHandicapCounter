@@ -45,10 +45,11 @@ void send_it(void)
 	Prints the characters given from input to function
 */
 /* ------------------------------------------------------------------------- */
-void printLcdChar(char *input) 
+void printLcdChar(char *input, int cursor) 
 {
 	RS_SIGN;	
 	int a = strlen(input); 
+	set_cursorLcd(cursor, 0);
 	for (int ix = 0; ix < a; ix++){
 		PORTD = input[ix];
 		send_it();
@@ -56,9 +57,32 @@ void printLcdChar(char *input)
 }
 
 
+
 /* ------------------------------------------------------------------------- */
 /*
-	Sets the cursor to x, y for next character
+	Prints the integers given from input to function. 
+	First puts the integer in char string, then send.
+*/
+/* ------------------------------------------------------------------------- */
+void printLcdInt(int input, int cursor) 
+{
+	RS_SIGN;	
+	char CharBuffer[4];
+	sprintf(CharBuffer, "%d", input);
+	int a = strlen(CharBuffer); 
+	set_cursorLcd(cursor, 0);
+	for (int ix = 0; ix < a; ix++){
+		PORTD = CharBuffer[ix];
+		send_it();
+	}
+}
+
+
+/* ------------------------------------------------------------------------- */
+/*
+	Sets the cursor to a, b for next character
+	a = row
+	b = column
 */
 /* ------------------------------------------------------------------------- */
 void set_cursorLcd(int a, int b) 

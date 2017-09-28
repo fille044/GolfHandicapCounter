@@ -17,7 +17,8 @@
 
 
 void send_it(void);
-void printLcdChar(char *input);
+void printLcdChar(char *input, int cursor);
+void printLcdInt(int input, int cursor);
 void clearLcd(void);
 void initLcd(void);
 void set_cursorLcd(int a, int b);

@@ -26,7 +26,6 @@ void initSystem(void)
 	DDRD = 0xFF;
 	DDRB = 0xFF;
 	_delay_ms(50);
-	initLcd();
 
 }
 

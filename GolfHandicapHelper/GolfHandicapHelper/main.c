@@ -13,15 +13,15 @@
 #define F_CPU 1000000UL
 
 
+
 int main(void)
 {
 	initSystem();
-	while (1)
-	{
-		set_cursorLcd(1,0);
-		printLcdChar("person[1].name");
-		set_cursorLcd(2,3);
-		printLcdChar("Filip");
+	initLcd();
+	
+	while (1) {
+		printLcdInt(1234, 1);
+		printLcdChar("Filip", 2);
 		_delay_ms(5000);
 		clearLcd();
 	}

@@ -124,9 +124,6 @@
     <Compile Include="hal.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="io.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="lcd.c">
       <SubType>compile</SubType>
     </Compile>
