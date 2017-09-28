@@ -118,10 +118,22 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="calc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="calc.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="hal.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="hal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="input.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="input.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="lcd.c">
@@ -131,6 +143,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="print_to_display.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="print_to_display.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

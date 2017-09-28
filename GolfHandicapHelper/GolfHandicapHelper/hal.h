@@ -11,6 +11,8 @@
 #include <avr/io.h>
 #include <stdint.h>       // needed for uint8_t
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /* Public header files */
 

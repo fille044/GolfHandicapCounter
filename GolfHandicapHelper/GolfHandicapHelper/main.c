@@ -9,9 +9,19 @@
 
 #include "lcd.h"
 #include "hal.h"
+#include "main.h"
 #include <util/delay.h>
 #define F_CPU 1000000UL
 
+
+void startTable(void) 
+{
+	for (int i = 0; i < TABLESIZE; i++) {
+		static int counter = 1;
+		table[i].HoleNo = counter;
+		counter++;
+	}
+}
 
 
 int main(void)
